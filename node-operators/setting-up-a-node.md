@@ -1,0 +1,3 @@
+# Setting up a node
+
+## Nerds at work, please turn down the volumes ...

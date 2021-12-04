@@ -1,0 +1,3 @@
+# Become a node operator
+
+## We love you, little dreamer, but please turn down the volume as we are working for you ...
