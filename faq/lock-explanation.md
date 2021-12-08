@@ -44,10 +44,10 @@ The lock time varies depending on the buyer type and buys time the following lis
 #### Dev team, Do Inc. & Dev donations
 
 * 20% immediately released&#x20;
-* 15% released after 1 year (360 days) from the buy time&#x20;
-* 25% released after 2 years (720 days) from the ICO ending time&#x20;
-* 25% released after 3 years (1080 days) from the ICO ending time&#x20;
-* 25% released after 4 years (1440 days) from the ICO ending time
+* 20% released after 1 year (360 days) from the ICO ending time&#x20;
+* 20% released after 2 years (720 days) from the ICO ending time&#x20;
+* 20% released after 3 years (1080 days) from the ICO ending time&#x20;
+* 20% released after 4 years (1440 days) from the ICO ending time
 
 
 
