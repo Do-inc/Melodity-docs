@@ -1,5 +1,11 @@
 # Storyboard - 2021
 
+## Revision 20-12-2021
+
+### Official Skynet address
+
+[https://siasky.net/AAB-CZKM2u7NOrm8chuVqS1VKWuzMTTXBKlLu3zl-qr3uw](https://siasky.net/AAB-CZKM2u7NOrm8chuVqS1VKWuzMTTXBKlLu3zl-qr3uw)
+
 ## Revision 22-10-2021
 
 ### Official Skynet address
