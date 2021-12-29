@@ -28,13 +28,13 @@ On this page we can identify a few elements, starting from the top left of the s
 
 The next image will clarify any doubt about the elements we talked about.
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7) (1).png>)
 
 ### Examine wallet's locks
 
 In order to examine the locks of a wallet address you only have to enter the wallet address on the search bar, for simplicity, we'll use the same address used in the previous example.
 
-![Examining a wallet locks](<../.gitbook/assets/image (1).png>)
+![Examining a wallet locks](<../.gitbook/assets/image (1) (1).png>)
 
 As we said once a valid wallet address is entered in the search bar the wallet search is automatically performed.
 
@@ -62,7 +62,7 @@ Once you've connected your wallet the button will partially show your wallet add
 
 Once your wallet gets connected a "Redeem" button will become visible.
 
-![Redeemable locks - BSC testnet](<../.gitbook/assets/image (2).png>)
+![Redeemable locks - BSC testnet](<../.gitbook/assets/image (2) (1).png>)
 
 Clicking on the "Redeem" button will let you sign and send the transaction and the funds will be immediately released to your wallet.
 

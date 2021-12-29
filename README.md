@@ -2,7 +2,7 @@
 description: Welcome to the Melodity technical documentation!
 ---
 
-# 🎵 Welcome🎵
+# Welcome🎵
 
 ## Melodity
 

@@ -18,8 +18,8 @@
 
 * [Become a node operator](node-operators/become-a-node-operator.md)
 * [Getting started with nodes](node-operators/getting-started-with-nodes.md)
-* [Setting up a node](node-operators/setting-up-a-node.md)
-* [Managing a node](node-operators/managing-a-node.md)
+* [Validators](node-operators/setting-up-a-node.md)
+* [Officially supported nodes](node-operators/managing-a-node.md)
 
 ## Whitepaper storyboard
 
