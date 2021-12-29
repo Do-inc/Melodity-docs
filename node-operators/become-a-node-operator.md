@@ -2,9 +2,9 @@
 
 ## Who is a node operator?
 
-A node operator is a person, a group of person or generally an entity that manages and maintain a full node of a network. In decentralized networks each of the node operators may or may not be publicly identifiable via KYC.
+A node operator is a person, a group of person or generally an entity that manages and maintain a full node of a network. In decentralized networks, each of the node operators may or may not be publicly identifiable via KYC.
 
-Virtually anyone with the knowlegde to maintain a server online can become a node operator.
+Virtually anyone with the knowledge to maintain a server online can become a node operator.
 
 ## How to participate?
 
@@ -12,7 +12,7 @@ In order to participate in the early phases of the testnet node operators **must
 
 In order to be eligible for becoming node operators of the testnet, the email **must** follow the standard defined below.
 
-_subject:_ Testnet node operator candidacy - \<your full name>
+_subject:_ (TestNet or MainNet) node operator candidacy - \<your full name>
 
 _body:_
 
