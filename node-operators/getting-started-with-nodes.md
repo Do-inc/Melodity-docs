@@ -47,6 +47,9 @@ Once the files are downloaded running a node is as simple as running the next co
 --base-path /tmp/<your node name> \
 --bootnodes /ip4/<boot-node ip>/tcp/30333/p2p/<boot-node identifier> \
 --name <your node name>
+--ws-external \
+--rpc-external \
+--rpc-cors all
 ```
 
 A few notes on the above command:

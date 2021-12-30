@@ -49,7 +49,10 @@ Once the files are downloaded running a node is as simple as running the next co
 --base-path /home/<username>/beats-chain/<your node name> \
 --bootnodes /ip4/<boot-node ip>/tcp/30333/p2p/<boot-node identifier> \
 --validator \
---name <your node name>
+--name <your node name> \
+--ws-external \
+--rpc-external \
+--rpc-cors all
 ```
 
 This method of running a validator node starts it in live streaming, this is useful for testing but not for running and maintaining a node, in order to run and maintain a node we suggest you use a tool like _supervisor_ that will keep your node up and running, and an example configuration for supervisor is given below
@@ -59,7 +62,7 @@ This method of running a validator node starts it in live streaming, this is use
 autorestart=true
 autostart=true
 
-command=/home/<username>/beats-chain/melodity-beats-node --chain chain-conf.raw.json --base-path /home/<username>/beats-chain/<your node name> --bootnodes /ip4/<boot-node ip>/tcp/30333/p2p/<boot-node identifier> --validator --name <your node name>
+command=/home/<username>/beats-chain/melodity-beats-node --chain chain-conf.raw.json --base-path /home/<username>/beats-chain/<your node name> --bootnodes /ip4/<boot-node ip>/tcp/30333/p2p/<boot-node identifier> --validator --name <your node name> --ws-external --rpc-external --rpc-cors all
 directory=/home/<username>/beats-chain/
 
 user=<username>
