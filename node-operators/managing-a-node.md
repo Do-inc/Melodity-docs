@@ -10,9 +10,9 @@ The following is a list of all the officially supported nodes with a granted upt
 
 #### Mainnet nodes
 
-<table><thead><tr><th>Name</th><th>IP</th><th>Node identifier</th><th data-type="checkbox">KYC</th></tr></thead><tbody><tr><td>Do inc - Node 1 </td><td>Not yet defined</td><td>Not yet defined</td><td>true</td></tr><tr><td>Do inc - Node 2</td><td>Not yet defined</td><td>Not yet defined</td><td>true</td></tr></tbody></table>
+<table><thead><tr><th>Name</th><th>IP</th><th>RPC url</th><th>Node identifier</th><th data-type="checkbox">KYC</th></tr></thead><tbody><tr><td>Do inc - Node 1 </td><td>Not yet defined</td><td>wss://rpc.melodity.org</td><td>Not yet defined</td><td>true</td></tr><tr><td>Do inc - Node 2</td><td>Not publicly accessible</td><td>Not publicly accessible</td><td>Not publicly accessible</td><td>true</td></tr></tbody></table>
 
 #### Testnet nodes
 
-<table><thead><tr><th>Name</th><th>IP</th><th>Node identifier</th><th data-type="checkbox">KYC</th></tr></thead><tbody><tr><td>Do inc - Node 1 </td><td>Not yet defined</td><td>Not yet defined</td><td>true</td></tr><tr><td>Do inc - Node 2</td><td>Not yet defined</td><td>Not yet defined</td><td>true</td></tr></tbody></table>
+<table><thead><tr><th>Name</th><th>IP</th><th>RPC url</th><th>Node identifier</th><th data-type="checkbox">KYC</th></tr></thead><tbody><tr><td>Do inc - Node 1 </td><td>54.38.190.74</td><td>wss://testnet-rpc.melodity.org</td><td>12D3KooWEzENvnxLaKVYqzYvDSsdMoJpXVznT4K7YQ6oviRtBE2z</td><td>true</td></tr><tr><td>Do inc - Node 2</td><td>Not publicly accessible</td><td>Not publicly accessible</td><td>Not publicly accessible</td><td>true</td></tr></tbody></table>
 
