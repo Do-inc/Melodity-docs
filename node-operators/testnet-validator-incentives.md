@@ -10,7 +10,7 @@ Here come the testnet validators incentives, these incentives are given only to 
 
 The incentive is given only for the first node of the testnet, running more than one node will not grant more incentives.
 
-In order to be eligible for the incentives, the whole KYC defined [here](become-a-node-operator.md#how-to-participate) **must** be completed.
+In order to be eligible for the incentives, the whole KYC defined [here](become-a-node-operator.md#kyc) **must** be completed.
 
 #### The incentive for running and maintaining online for lifetime ONLY a testnet validator node
 
@@ -27,4 +27,4 @@ In order to be eligible for the incentives, the whole KYC defined [here](become-
 
 ****
 
-**\*** The amount of $MELB will be airdropped only once the staking is confirmed onchain
+**\*** The amount of $MELB will be airdropped only once the staking is confirmed onchain.
