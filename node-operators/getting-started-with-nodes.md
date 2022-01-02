@@ -39,6 +39,11 @@ wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v1.1.3/cha
 Make sure to always download the latest version (v 1.1.3 at the time of writing).
 {% endhint %}
 
+{% hint style="warning" %}
+Depending on your system you may need to make the file executable using:\
+`chmod +x melodity-beats-node`
+{% endhint %}
+
 Once the files are downloaded running a node is as simple as running the next command
 
 ```
