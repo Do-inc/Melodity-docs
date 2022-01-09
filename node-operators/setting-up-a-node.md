@@ -24,21 +24,21 @@ All released versions of the _Melodity Beats Nodes_ can be found on the [officia
 In order to run a node download the _melodity-beats-node_ executable in your machine using your preferred method, in the next example, we will use _wget_.
 
 ```
-wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v1.1.3/melodity-beats-node
+wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v2.0.1/melodity-beats-node
 ```
 
 {% hint style="info" %}
-Make sure to always download the latest version (v 1.1.3 at the time of writing).
+Make sure to always download the latest version (v 2.0.1 at the time of writing).
 {% endhint %}
 
 Another file needed is the configuration file named _chain-conf.raw.json_ it will be included in all the releases even if it will change very little between releases. You may download it with _wget_ as follows.
 
 ```
-wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v1.1.3/chain-conf.raw.json
+wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v2.0.1/chain-conf.raw.json
 ```
 
 {% hint style="info" %}
-Make sure to always download the latest version (v 1.1.3 at the time of writing).
+Make sure to always download the latest version (v 2.0.1 at the time of writing).
 {% endhint %}
 
 {% hint style="warning" %}
@@ -52,9 +52,10 @@ Once the files are downloaded running a node is as simple as running the next co
 ./melodity-beats-node \ 
 --chain chain-conf.raw.json \
 --base-path /home/<username>/beats-chain/<your node name> \
---bootnodes /ip4/<boot-node ip>/tcp/30333/p2p/<boot-node identifier> \
+--bootnodes /dns/<boot-node domain>/tcp/30333/p2p/<boot-node identifier> \
 --validator \
---name <your node name>
+--name <your node name> \
+--rpc-cors all
 ```
 
 This method of running a validator node starts it in live streaming, this is useful for testing but not for running and maintaining a node, in order to run and maintain a node we suggest you use a tool like _supervisor_ that will keep your node up and running, and an example configuration for supervisor is given below
@@ -64,7 +65,7 @@ This method of running a validator node starts it in live streaming, this is use
 autorestart=true
 autostart=true
 
-command=/home/<username>/beats-chain/melodity-beats-node --chain chain-conf.raw.json --base-path /home/<username>/beats-chain/<your node name> --bootnodes /ip4/<boot-node ip>/tcp/30333/p2p/<boot-node identifier> --validator --name <your node name>
+command=/home/<username>/beats-chain/melodity-beats-node --chain chain-conf.raw.json --base-path /home/<username>/beats-chain/<your node name> --bootnodes /dns/<boot-node domain>/tcp/30333/p2p/<boot-node identifier> --validator --name <your node name> --rpc-cors all
 directory=/home/<username>/beats-chain/
 
 user=<username>
@@ -176,7 +177,7 @@ Connect to one of the official nodes using the "_live networks_" section or inse
 
 Navigate to the account section, and allow the polkadot.js extension to inject the accounts. Then check that your _stash_ wallet owns enough funds to start the stacking process, remember that the controller needs funds too in order to run actions on the stash account.
 
-Once you're sure to own enough funds in the controller to stake and control the stash wallet open a new page of the explorer but instead of connecting to one of the officials granted nodes open the "custom" section and insert "ws://\<your server ip>:9944" then press switch on the top of the page.
+Once you're sure to own enough funds in the controller to stake and control the stash wallet open a new page of the explorer but instead of connecting to one of the officials granted nodes open the "custom" section and insert "wss://\<your server ip>" then press switch on the top of the page.
 
 ![Connection to your running node](<../.gitbook/assets/image (7).png>)
 
