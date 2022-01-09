@@ -52,7 +52,7 @@ Once the files are downloaded running a node is as simple as running the next co
 ./melodity-beats-node \ 
 --chain chain-conf.raw.json \
 --base-path /home/<username>/beats-chain/<your node name> \
---bootnodes /dns/<boot-node domain>/tcp/30333/p2p/<boot-node identifier> \
+--bootnodes /ip4/<boot-node ip>/tcp/30333/p2p/<boot-node identifier> \
 --validator \
 --name <your node name> \
 --rpc-cors all
@@ -65,16 +65,16 @@ This method of running a validator node starts it in live streaming, this is use
 autorestart=true
 autostart=true
 
-command=/home/<username>/beats-chain/melodity-beats-node --chain chain-conf.raw.json --base-path /home/<username>/beats-chain/<your node name> --bootnodes /dns/<boot-node domain>/tcp/30333/p2p/<boot-node identifier> --validator --name <your node name> --rpc-cors all
+command=/home/<username>/beats-chain/melodity-beats-node --chain chain-conf.raw.json --base-path /home/<username>/beats-chain/<your node name> --bootnodes /ip4/<boot-node ip>/tcp/30333/p2p/<boot-node identifier> --validator --name <your node name> --rpc-cors all
 directory=/home/<username>/beats-chain/
 
 user=<username>
 
 stdout_logfile=/home/<username>/beats-chain/beats_chain_node.log
-stdout_logfile_maxbytes=50MB
+stdout_logfile_maxbytes=10MB
 stdout_logfile_backups=1
 stderr_logfile=/home/<username>/beats-chain/beats_chain_node.error.log
-stderr_logfile_maxbytes=50MB
+stderr_logfile_maxbytes=10MB
 stderr_logfile_backups=1
 ```
 

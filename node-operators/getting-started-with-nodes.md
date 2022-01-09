@@ -50,7 +50,7 @@ Once the files are downloaded running a node is as simple as running the next co
 ./melodity-beats-node \ 
 --chain chain-conf.raw.json \
 --base-path /tmp/<your node name> \
---bootnodes /dns/<boot-node domain>/tcp/30333/p2p/<boot-node identifier> \
+--bootnodes /ip4/<boot-node ip>/tcp/30333/p2p/<boot-node identifier> \
 --name <your node name>
 ```
 
