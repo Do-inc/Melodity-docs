@@ -42,7 +42,7 @@ Make sure to always download the latest version (v 2.0.1 at the time of writing)
 {% endhint %}
 
 {% hint style="warning" %}
-Depending on your system you may need to make the file executable using:\
+You will need to make the file executable using:\
 `chmod +x melodity-beats-node`
 {% endhint %}
 
@@ -89,6 +89,73 @@ Explaining a bit the supervisor configuration provided above:
 {% hint style="info" %}
 All _\<text>_ tags **must** be substituted in order for the program and the configuration to work, they are simply placeholders
 {% endhint %}
+
+Once _supervisor_ is set up the next step in order to complete the whole tutorial is setting up a web server in order for you to easily connect to your node.
+
+Start by installing and configuring _nginx_.
+
+```
+apt install nginx
+cat > /etc/nginx/sites-available/beats_chain_rpc <<EOF  
+server {
+        server_name <domain>;
+ 
+        root /var/www/html;
+        index index.html;
+ 
+        location / {
+          try_files $uri $uri/ =404;
+ 
+          proxy_buffering off;
+          proxy_pass http://localhost:9944;
+          proxy_set_header X-Real-IP $remote_addr;
+          proxy_set_header Host $host;
+          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+ 
+          proxy_http_version 1.1;
+          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Connection "upgrade";
+        }
+ 
+#        listen [::]:443 ssl ipv6only=on;
+        listen 443 ssl;
+        ssl_certificate <your domain ssl certificate>;
+        ssl_certificate_key <your domain ssl private key>;
+ 
+        ssl_session_cache shared:cache_nginx_SSL:1m;
+        ssl_session_timeout 1440m;
+ 
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers on;
+ 
+        ssl_ciphers "ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-RSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-RSA-AES256-SHA256:DHE-RSA-AES256-SHA:ECDHE-ECDSA-DES-CBC3-SHA:ECDHE-RSA-DES-CBC3-SHA:EDH-RSA-DES-CBC3-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:DES-CBC3-SHA:!DSS";
+}
+EOF
+ln -s /etc/nginx/sites-available/beats_chain_rpc /etc/nginx/sites-enabled/
+rm /etc/nginx/sites-enabled/default
+```
+
+Once the Nginx server endpoint is set up its time to set up nginx to work as a daemon with Supervisor.
+
+```
+cat > /etc/supervisor/conf.d/nginx.conf <<EOF
+[program:nginx]
+command=/usr/sbin/nginx -g "daemon off;"
+autostart=true
+autorestart=true
+startretries=5
+numprocs=1
+stderr_logfile=/var/log/supervisor/%(program_name)s.log
+stderr_logfile_maxbytes=10MB
+stdout_logfile=/var/log/supervisor/%(program_name)s.error.log
+stdout_logfile_maxbytes=10MB
+EOF
+systemctl disable nginx
+service nginx stop
+supervisorctl reread
+supervisorctl update
+supervisorctl status
+```
 
 ## Candidating as a validator
 

@@ -279,7 +279,7 @@ systemctl enable grafana-server
 service grafana-server start
 ```
 
-Finally, the last thing to do is link your domain to the Grafana internally running service, this can be done with the help of _nginx._ You may install and setup it using the following commands
+Finally, the last thing to do is link your domain to the Grafana internally running service, this can be done with the help of _nginx._ You may install and setup it using the following command
 
 ```
 apt install nginx
