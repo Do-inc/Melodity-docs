@@ -62,7 +62,7 @@ Once you've connected your wallet the button will partially show your wallet add
 
 Once your wallet gets connected a "Redeem" button will become visible.
 
-![Redeemable locks - BSC testnet](<../.gitbook/assets/image (2) (1).png>)
+![Redeemable locks - BSC testnet](<../.gitbook/assets/image (2) (1) (1).png>)
 
 Clicking on the "Redeem" button will let you sign and send the transaction and the funds will be immediately released to your wallet.
 

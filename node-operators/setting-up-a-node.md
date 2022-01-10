@@ -275,7 +275,7 @@ Once connected to your node open the _developer_ section and select `RPC calls` 
 
 Once opened the `RPC calls` section select the `author` __ endpoint and the `rotateKeys` function as in the following picture.
 
-![Rotate author keys](<../.gitbook/assets/image (2).png>)
+![Rotate author keys](<../.gitbook/assets/image (2) (1).png>)
 
 Then click on the "_Submit RPC call_" button a full code will be returned on the page, copy it and annotate it.\
 Connect back to one of the official nodes and navigate to the `stacking` section under `Network`.  Then navigate to the `Account actions` table like in the following pic.
@@ -292,7 +292,7 @@ Based on the way you want to receive the funds choose one of the options from th
 
 Press "_Next_" once ready and you'll be presented with a screen similar to the following.
 
-![Setting up a validator step 2/2](<../.gitbook/assets/image (8).png>)
+![Setting up a validator step 2/2](<../.gitbook/assets/image (8) (1).png>)
 
 Insert in the first field the result of the previous call to `rotateKeys` __ define a reward commission that fits your needs then click the "Bond & Validate" button and sign the transaction.
 
