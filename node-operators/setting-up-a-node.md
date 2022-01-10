@@ -2,7 +2,7 @@
 
 ## Who are validators?
 
-Validators exist because of the consensus methodology (dPoS - delegated Proof of Stake)  used by the _Beats Chain_. A validator is a _node operator_ but in advance contributes to block production and validation.
+Validators exist because of the consensus methodology (nPoS - nominated Proof of Stake)  used by the _Beats Chain_. A validator is a _node operator_ but in advance contributes to block production and validation.
 
 {% hint style="info" %}
 Validators receive prizes for the service they give to the network but they will lose funds in case of unfair or malicious behaviour
@@ -16,12 +16,12 @@ There are two methods of setting up a validator node:
 * getting the official executables and simply run them on your machine
 
 {% hint style="info" %}
-Executables are built only for Linux machines, for any other OS you need to compile the sources from scratch using _cargo_.
+Executables are built only for Linux machines, for any other OS you need to compile the sources from scratch using `cargo`.
 {% endhint %}
 
 All released versions of the _Melodity Beats Nodes_ can be found on the [official GitHub repository](https://github.com/Do-inc/melodity-beats-chain/releases).&#x20;
 
-In order to run a node download the _melodity-beats-node_ executable in your machine using your preferred method, in the next example, we will use _wget_.
+In order to run a node download the `melodity-beats-node` __ executable in your machine using your preferred method, in the next example, we will use _wget_.
 
 ```
 wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v2.1.0/melodity-beats-node
@@ -31,7 +31,12 @@ wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v2.1.0/mel
 Make sure to always download the latest version (v 2.1.0 at the time of writing).
 {% endhint %}
 
-Another file needed is the configuration file named _chain-conf.raw.json_ it will be included in all the releases even if it will change very little between releases. You may download it with _wget_ as follows.
+{% hint style="warning" %}
+You will need to make the file executable using:\
+`chmod +x melodity-beats-node`
+{% endhint %}
+
+Another file needed is the configuration file named `chain-conf.raw.json` __ it will be included in all the releases as it holds the runtime code. You may download it with _wget_ as follows.
 
 ```
 wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v2.1.0/chain-conf.raw.json
@@ -39,11 +44,6 @@ wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v2.1.0/cha
 
 {% hint style="info" %}
 Make sure to always download the latest version (v 2.1.0 at the time of writing).
-{% endhint %}
-
-{% hint style="warning" %}
-You will need to make the file executable using:\
-`chmod +x melodity-beats-node`
 {% endhint %}
 
 Once the files are downloaded running a node is as simple as running the next command
@@ -58,7 +58,17 @@ Once the files are downloaded running a node is as simple as running the next co
 --rpc-cors all
 ```
 
-This method of running a validator node starts it in live streaming, this is useful for testing but not for running and maintaining a node, in order to run and maintain a node we suggest you use a tool like _supervisor_ that will keep your node up and running, and an example configuration for supervisor is given below
+This command will:
+
+* Start the `melodity-beats-node` from your current directory
+* Load the configuration stored in `chain-conf.raw.json`
+* Set the storage path where all blocks and data will be stored to `/home/<username>/beats-chain/<your node name>`
+* Load the current chain state from the node `/ip4/<boot-node ip>/tcp/30333/p2p/<boot-node identifier>`
+* Start the node as a validator
+* Set the node name to `<your node name>`&#x20;
+* Permit all incoming RPC and Websocket connections to your node
+
+This method of running a validator node starts it in live streaming, this is useful for testing but not for running and maintaining a node, in order to run and maintain a node we suggest you use a tool like `supervisor` that will keep your node up and running, and an example configuration for supervisor is given below
 
 ```
 [program:beats_chain_node]
@@ -80,19 +90,23 @@ stderr_logfile_backups=1
 
 Explaining a bit the supervisor configuration provided above:
 
-* L 1: Supervisor identifies the beats chain node as "_beats\_chain\_node_" __ so every time you need to interact, restart etc. with your node you may refer to it using its name
-* L 2-3: The node will automatically restart (by default at most 3 times in 60s) if it dies for any reason, also once supervisor starts the node will automatically start
-* L 5-6: In the example configuration we have placed all the node files under the _/home/\<username>/beats-chain_ path so we _chdir_ to that folder before starting the node and then run the command to start the node
+* L 1: Supervisor identifies the beats chain node as `beats_chain_node` __ so every time you need to interact, restart etc. with your node you may refer to it using this name
+* L 2-3: The node will automatically restart (by default at most 3 times in 60 seconds) if it dies for any reason, also once `supervisor` starts the node will automatically start
+* L 5-6: In the example configuration we have placed all the node files under the `/home/<username>/beats-chain` __ so we `chdir` to that folder before starting the node and then run the command to start the node
 * L 8: Supervisor usually boots up as _root_ with its default configuration, in order to follow the _least privilege pattern_ we change from _root_ to a different user
-* L 10-15: As supervisor starts the node as a daemon service we need to log the standard output and the errors if any, the two files are _/home/\<username>/beats-chain/beats\_chain\_node.log_ for the standard output and _/home/\<username>/beats-chain/beats\_chain\_node.error.log_ for the errors, both the files will be at most 50MB large and have a backup so that at most 200MB of storage is taken by the node execution logs
+* L 10-15: As `supervisor` starts the node as a daemon service we need to log the standard output and the errors if any, the two files are `/home/<username>/beats-chain/beats_chain_node.log` for the standard output and `/home/<username>/beats-chain/beats_chain_node.error.log` for the errors, both the files will be at most 10MB large and have a backup so that at most 40MB of storage is taken by the node execution logs.
 
-{% hint style="info" %}
-All _\<text>_ tags **must** be substituted in order for the program and the configuration to work, they are simply placeholders
+{% hint style="danger" %}
+Substrate based chains output the default standard output to `stderr` so you'll find the standards log mixed up with errors in your `<file>.error.log`
 {% endhint %}
 
-Once _supervisor_ is set up the next step in order to complete the whole tutorial is setting up a web server in order for you to easily connect to your node.
+{% hint style="info" %}
+All `<text>` tags **must** be substituted in order for the program and the configuration to work, they are simply placeholders
+{% endhint %}
 
-Start by installing and configuring _nginx_.
+Once `supervisor` is set up the next step in order to complete the whole tutorial is setting up a web server in order for you to connect to your node using Websockets and RPC.
+
+To start you need to install and configure `nginx`.
 
 ```
 apt install nginx
@@ -135,7 +149,12 @@ ln -s /etc/nginx/sites-available/beats_chain_rpc /etc/nginx/sites-enabled/
 rm /etc/nginx/sites-enabled/default
 ```
 
-Once the Nginx server endpoint is set up its time to set up nginx to work as a daemon with Supervisor.
+The previous configuration needs you to have:
+
+* A domain name you own
+* An SSL certificate for your domain
+
+Once the Nginx server endpoint is set up its time to set up Nginx to work as a daemon with `supervisor`.
 
 ```
 cat > /etc/supervisor/conf.d/nginx.conf <<EOF
@@ -157,11 +176,13 @@ supervisorctl update
 supervisorctl status
 ```
 
+The previous commands load the Nginx configuration to the standard Supervisor configuration and reload the supervisor configuration actually starting Nginx as a supervised daemon.
+
 ## Candidating as a validator
 
 Even if the node is completely set up you're not yet candidating as a validator and your node is simply acting as a backup one.&#x20;
 
-To candidate, your node as a validator first download _subkey_, a tool for generating substrate-based accounts. You can find the official version of subkey in our GitHub repository or use the following command to directly download it.
+To candidate, your node as a validator first download `subkey`, a tool for generating substrate-based accounts. You can find the official version of `subkey` in our GitHub repository or use the following command to directly download it.
 
 ```
 wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v1.0.0/subkey
@@ -210,7 +231,7 @@ Now your stash address is `6i1YwYCaARv6Z6fSZdWFoJWhfMeWLMTSqsNCtwxWmpjhP36p` , s
 
 #### Polkadot.js extension
 
-In order to ease the procedure of setting up a validator node now that your node is up and running on a server, we start interacting with it using RPC but first, we need to set up the extension to work with Polkadot environment.&#x20;
+In order to ease the procedure of setting up a validator node now that your node is up and running on a server, we start interacting with it using RPC but first, we need to set up the extension to work with the Polkadot environment.&#x20;
 
 The extension you're going to install is the officially, community-supported extension, you can download and install it in your browser from [https://polkadot.js.org/extension/](https://polkadot.js.org/extension/)
 
@@ -244,20 +265,20 @@ Connect to one of the official nodes using the "_live networks_" section or inse
 
 Navigate to the account section, and allow the polkadot.js extension to inject the accounts. Then check that your _stash_ wallet owns enough funds to start the stacking process, remember that the controller needs funds too in order to run actions on the stash account.
 
-Once you're sure to own enough funds in the controller to stake and control the stash wallet open a new page of the explorer but instead of connecting to one of the officials granted nodes open the "custom" section and insert "wss://\<your server ip>" then press switch on the top of the page.
+Once you're sure to own enough funds in the controller to stake and control the stash wallet open a new page of the explorer but instead of connecting to one of the officials granted nodes open the "custom" section and insert `wss://<your server ip>` then press switch on the top of the page.
 
 ![Connection to your running node](<../.gitbook/assets/image (7).png>)
 
-Once connected to your node open the _developer_ section and select "_RPC calls_" like in the following picture.
+Once connected to your node open the _developer_ section and select `RPC calls` like in the following picture.
 
 ![Opening the RPC calls section](<../.gitbook/assets/Screenshot from 2021-12-29 10-51-56 (2).png>)
 
-Once opened the "_RPC calls_" section select the _author_ endpoint and the _rotateKeys_ function as in the following picture.
+Once opened the `RPC calls` section select the `author` __ endpoint and the `rotateKeys` function as in the following picture.
 
 ![Rotate author keys](<../.gitbook/assets/image (2).png>)
 
 Then click on the "_Submit RPC call_" button a full code will be returned on the page, copy it and annotate it.\
-Connect back to one of the official nodes and navigate to the "_stacking_" section under "_Network_".  Then navigate to the "Account actions" table like in the following pic.
+Connect back to one of the official nodes and navigate to the `stacking` section under `Network`.  Then navigate to the `Account actions` table like in the following pic.
 
 ![Account actions table](../.gitbook/assets/Untitled.png)
 
@@ -273,12 +294,12 @@ Press "_Next_" once ready and you'll be presented with a screen similar to the f
 
 ![Setting up a validator step 2/2](<../.gitbook/assets/image (8).png>)
 
-Insert in the first field the result of the previous call to _rotateKeys_ define a reward commission that fits your needs then click the "Bond & Validate" button and sign the transaction.
+Insert in the first field the result of the previous call to `rotateKeys` __ define a reward commission that fits your needs then click the "Bond & Validate" button and sign the transaction.
 
-You've now successfully set up your validator node, at the next era rotation (about 30mins) if a position is available and your node has enough nominators it will be elected and start contributing to the network.
+You've now successfully set up your validator node, at the next era rotation (about 1 hour) if a position is available and your node has enough nominators it will be elected and start contributing to the network.
 
 ## Validator payout
 
-Validator payout may be released by anyone and will be triggered for all the validators, you can check the pending payout and the "_Payout_" table of the "_Stake_" section.
+Validator payout may be released by anyone and will be triggered for all the validators, you can check the pending payout and the `Payout` table of the `Stake` section.
 
-Payouts will be computed at the end of each era (about 30mins).
+Payouts will be computed at the end of each era (about 1 hour).
