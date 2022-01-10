@@ -14,5 +14,5 @@ The following is a list of all the officially supported nodes with a granted upt
 
 #### Testnet nodes
 
-<table><thead><tr><th>Name</th><th>IP</th><th>RPC url</th><th>Node identifier</th><th data-type="checkbox">KYC</th></tr></thead><tbody><tr><td>Do inc - Node 1 </td><td>54.38.190.74</td><td>wss://testnet-rpc.melodity.org</td><td>12D3KooWBF1RZwDaCTot53Z43zVyLi3rjPLqT2jPfdn9etYGMDQL</td><td>true</td></tr><tr><td>Do inc - Node 2</td><td>Not publicly accessible</td><td>Not publicly accessible</td><td>12D3KooWQfj2W8VW1NRTwPUcRRussHw3Z83898NRs8zgFB7xBCC4</td><td>true</td></tr></tbody></table>
+<table><thead><tr><th>Name</th><th>IP</th><th>RPC url</th><th>Node identifier</th><th data-type="checkbox">KYC</th></tr></thead><tbody><tr><td>Do inc - Node 1 </td><td>54.38.190.74</td><td>wss://testnet-rpc.melodity.org</td><td>12D3KooWJ8r8AozLtYDxnd8eD5AePDtryTHUKshMgzBysyh7vA2n</td><td>true</td></tr><tr><td>Do inc - Node 2</td><td>Not publicly accessible</td><td>Not publicly accessible</td><td>12D3KooWMMSymAB3W7j7ejUgxErN6AiJaB5mWqYDv8K4twZoAgVP</td><td>true</td></tr></tbody></table>
 
