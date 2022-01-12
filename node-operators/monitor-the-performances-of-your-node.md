@@ -6,17 +6,6 @@ description: >-
 
 # Monitor the performances of your node
 
-## Server requirements
-
-In order to successfully run a validator node, the server should have at least:&#x20;
-
-* CPU: 6+ vCore
-* Ram: 16+ Gb
-* Storage: 160+ Gb (possibly SSD)
-* Bandwith: 1+ Gbps (unmetered)
-
-We suggest you run a [VPS on OVH](https://www.ovh.it/order/vps/?v=3#/vps/build?selection=\~\(range\~%27Elite\~pricingMode\~%27degressivity12\~flavor\~%27vps-elite-8-16-160\~os\~%27ubuntu\_20\_04\~datacenters\~\(SBG\~1\)\)) as the price is pretty low.
-
 ## Monitoring your node
 
 In order to monitor your node performance you have to use a couple of tools:
