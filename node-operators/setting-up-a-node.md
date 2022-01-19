@@ -126,7 +126,7 @@ Once `supervisor` is set up the next step in order to complete the whole tutoria
 To start you need to install and configure `nginx`.
 
 ```
-apt install nginx
+apt install -y nginx
 cat > /etc/nginx/sites-available/beats_chain_rpc <<EOF  
 server {
         server_name <domain>;
