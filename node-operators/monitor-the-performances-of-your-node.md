@@ -275,7 +275,7 @@ Finally, the last thing to do is link your domain to the Grafana internally runn
 apt install nginx
 cat > /etc/nginx/sites-available/grafana-reverse-proxy <<EOF
 # this is required to proxy Grafana Live WebSocket connections.
-map $http_upgrade $connection_upgrade {
+map \$http_upgrade \$connection_upgrade {
   default upgrade;
   '' close;
 }
@@ -288,18 +288,18 @@ server {
 
         location / {
           proxy_pass http://localhost:3000/;
-          proxy_set_header Host $host;
+          proxy_set_header Host \$host;
           proxy_http_version 1.1;
-          proxy_set_header Upgrade $http_upgrade;
+          proxy_set_header Upgrade \$http_upgrade;
           proxy_set_header Connection "upgrade";
         }
 
 	location /api/live {
-   		rewrite  ^/(.*)  /$1 break;
+   		rewrite  ^/(.*)  /\$1 break;
     		proxy_http_version 1.1;
-    		proxy_set_header Upgrade $http_upgrade;
-    		proxy_set_header Connection $connection_upgrade;
-    		proxy_set_header Host $http_host;
+    		proxy_set_header Upgrade \$http_upgrade;
+    		proxy_set_header Connection \$connection_upgrade;
+    		proxy_set_header Host \$http_host;
     		proxy_pass http://localhost:3000/;
   	}
 
