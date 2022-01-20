@@ -150,6 +150,7 @@ stdout_logfile=/home/<username>/prometheus-node-exporter/node_exporter.log
 stdout_logfile_maxbytes=10MB
 stderr_logfile=/home/<username>/prometheus-node-exporter/node_exporter.error.log
 stderr_logfile_maxbytes=10MB
+EOF
 ```
 
 The two configuration files make the node exporter and the Prometheus executables start automatically. Remember to change _\<username>_ with your username.
