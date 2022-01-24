@@ -22,21 +22,21 @@ All released versions of the _Melodity Beats Nodes_ can be found on the [officia
 In order to run a node download the _melodity-beats-node_ executable in your machine using your preferred method, in the next example, we will use _wget_.
 
 ```
-wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v2.1.0/melodity-beats-node
+wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v2.1.1/melodity-beats-node
 ```
 
 {% hint style="info" %}
-Make sure to always download the latest version (v 2.1.0 at the time of writing).
+Make sure to always download the latest version (v 2.1.1 at the time of writing).
 {% endhint %}
 
 Once you've downloaded the node executable there is one more file needed, it is the configuration file named `chain-conf.raw.json` __ it will be included in all the releases even if it will change very little between releases. You may download it using `wget` __ as follows.
 
 ```
-wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v2.0.1/chain-conf.raw.json
+wget https://github.com/Do-inc/melodity-beats-chain/releases/download/v2.1.1/chain-conf.raw.json
 ```
 
 {% hint style="info" %}
-Make sure to always download the latest version (v 2.1.0 at the time of writing).
+Make sure to always download the latest version (v 2.1.1 at the time of writing).
 {% endhint %}
 
 {% hint style="warning" %}
