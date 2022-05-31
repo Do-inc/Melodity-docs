@@ -23,7 +23,3 @@
 * [Testnet validator incentives](node-operators/testnet-validator-incentives.md)
 * [Playing with Testnet](node-operators/playing-with-testnet.md)
 * [Officially supported nodes](node-operators/managing-a-node.md)
-
-## Whitepaper storyboard
-
-* [Storyboard - 2021](whitepaper-storyboard/storyboard-2021.md)

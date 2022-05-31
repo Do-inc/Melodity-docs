@@ -30,6 +30,4 @@ Artists can tokenize their music and restore a new equilibrium where art, real e
 
 Now we are on Private Sale. If you need more information on how to access, drop us a mail so we can contact you!
 
-## **When will be the Melodity ICO?**
-
-The start date of the ICO will be announced shortly. We are preparing everything to be ready as soon as possible.
+****

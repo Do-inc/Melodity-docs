@@ -12,20 +12,20 @@ Locks are basically a way to deliberately limit the maximum circulating supply o
 
 ### **Why have you chosen to use locks?**
 
-The answer to this question is pretty easy, in order to grant a wise and profitable investment for all the early adopters and to avoid the sell-off of a large number of tokens just once the ICO is ended, there is one methodology only, not to allow the users to access their funds immediately so that the market doesn’t get overwhelmed by the full supply immediately.
+The answer to this question is pretty easy, in order to grant a wise and profitable investment for all the early adopters and to avoid the sell-off of a large number of tokens just once the TGE is ended, there is one methodology only, not to allow the users to access their funds immediately so that the market doesn’t get overwhelmed by the full supply immediately.
 
 ### **Does the lock apply also to the dev and company funds?**
 
 Of course yes, developers, people who received the dev donations and also Do inc. receive the funds following a fixed and immutable time schedule as everyone else. Particularly the time schedule for all the above owners is defined as follow:
 
 * **20%** released immediately
-* **20%** released annually in 4 years after the end of the ICO
+* **20%** released annually in 4 years after the end of the TGE
 
 ## **Which are the lock times?**
 
-The lock time varies depending on the buyer type and buys time the following list should be enough exhaustive (remark that the ICO ending time is 31-03-2022 23:59:59 GMT):
+The lock time varies depending on the buyer type and buys time the following list should be enough exhaustive (remark that the TGE ending time is 31-03-2022 23:59:59 GMT):
 
-**ICO buyers:**
+**TGE buyers:**
 
 * 10% immediately released&#x20;
 * 15% released after 3 months (90 days) from the buy time&#x20;
@@ -37,17 +37,17 @@ The lock time varies depending on the buyer type and buys time the following lis
 
 * 10% immediately released&#x20;
 * 15% released after 6 months (180 days) from the buy time&#x20;
-* 25% released after 6 months (180 days) from the ICO ending time&#x20;
-* 25% released after 12 months (360 days) from the ICO ending time&#x20;
-* 25% released after 18 months (540 days) from the ICO ending time
+* 25% released after 6 months (180 days) from the TGE ending time&#x20;
+* 25% released after 12 months (360 days) from the TGE ending time&#x20;
+* 25% released after 18 months (540 days) from the TGE ending time
 
 #### Dev team, Do Inc. & Dev donations
 
 * 20% immediately released&#x20;
-* 20% released after 1 year (360 days) from the ICO ending time&#x20;
-* 20% released after 2 years (720 days) from the ICO ending time&#x20;
-* 20% released after 3 years (1080 days) from the ICO ending time&#x20;
-* 20% released after 4 years (1440 days) from the ICO ending time
+* 20% released after 1 year (360 days) from the TGE ending time&#x20;
+* 20% released after 2 years (720 days) from the TGE ending time&#x20;
+* 20% released after 3 years (1080 days) from the TGE ending time&#x20;
+* 20% released after 4 years (1440 days) from the TGE ending time
 
 
 
