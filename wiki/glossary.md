@@ -842,7 +842,7 @@
 
 [**Hard Cap**](https://academy.binance.com/en/glossary/hard-cap)
 
-[The maximum amount of funds a project intends to raise during their Token Generation Event (TGE) or alternative fundraising event.](https://academy.binance.com/en/glossary/hard-cap)
+[The maximum amount of funds a project intends to raise during their Initial Coin Offering (ICO) or alternative fundraising event.](https://academy.binance.com/en/glossary/hard-cap)
 
 
 
@@ -904,7 +904,7 @@
 
 
 
-****[**Token Generation Event (TGE)**](../#melodity)****
+[**Initial Coin Offering (ICO)**](https://academy.binance.com/en/glossary/initial-coin-offering)
 
 [A fundraising method in which new projects will sell their cryptocurrency to investors.](https://academy.binance.com/en/glossary/initial-coin-offering)
 

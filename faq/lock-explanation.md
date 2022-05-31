@@ -25,7 +25,7 @@ Of course yes, developers, people who received the dev donations and also Do inc
 
 The lock time varies depending on the buyer type and buys time the following list should be enough exhaustive (remark that the TGE ending time is 31-03-2022 23:59:59 GMT):
 
-**TGE buyers:**
+**TGE:**
 
 * 10% immediately released&#x20;
 * 15% released after 3 months (90 days) from the buy time&#x20;
@@ -33,7 +33,7 @@ The lock time varies depending on the buyer type and buys time the following lis
 * 25% released after 15 months (450 days) from the buy time&#x20;
 * 25% released after 21 months (630 days) from the buy time
 
-#### **Private Sale buyers:**
+#### **Private Sale:**
 
 * 10% immediately released&#x20;
 * 15% released after 6 months (180 days) from the buy time&#x20;

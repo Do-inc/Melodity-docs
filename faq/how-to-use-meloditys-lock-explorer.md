@@ -7,7 +7,7 @@ description: >-
 
 # How to use Melodity's lock explorer?
 
-The melodity's lock explorer can be found at [https://lock.melodity.org/](https://lock.melodity.org/).
+The melodity's lock explorer can be found at [https://lock.melodity.org/](https://lock.melodity.org).
 
 ### Melodity lock explorer composition
 
